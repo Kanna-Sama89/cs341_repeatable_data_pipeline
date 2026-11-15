@@ -1,0 +1,18 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+
+# Raw TLC Parquet datasets (3GB+; download on-demand)
+data/raw/
+*.parquet.tmp
+
+# Matplotlib cache
+.matplotlib/
+

@@ -1,0 +1,168 @@
+2026-11-15 15:39:55,265 [INFO] pipeline: === Phase 1: Ingestion & Caching ===
+2026-11-15 15:39:55,265 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-01.parquet to yellow_tripdata_2024-01.parquet
+2026-11-15 15:39:56,295 [INFO] pipeline.ingest: Successfully downloaded yellow_tripdata_2024-01.parquet (49961641 bytes)
+2026-11-15 15:39:56,296 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2024-01.parquet to green_tripdata_2024-01.parquet
+2026-11-15 15:39:56,439 [INFO] pipeline.ingest: Successfully downloaded green_tripdata_2024-01.parquet (1362284 bytes)
+2026-11-15 15:39:56,441 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/fhv_tripdata_2024-01.parquet to fhv_tripdata_2024-01.parquet
+2026-11-15 15:39:56,812 [INFO] pipeline.ingest: Successfully downloaded fhv_tripdata_2024-01.parquet (15023585 bytes)
+2026-11-15 15:39:56,814 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/fhvhv_tripdata_2024-01.parquet to fhvhv_tripdata_2024-01.parquet
+2026-11-15 15:40:07,803 [INFO] pipeline.ingest: Successfully downloaded fhvhv_tripdata_2024-01.parquet (472757547 bytes)
+2026-11-15 15:40:07,806 [INFO] pipeline: Ingestion complete. Total datasets ready: 4
+2026-11-15 15:40:07,806 [INFO] pipeline: === Phase 2: Data Quality & Sanity Validation ===
+2026-11-15 15:40:07,978 [INFO] pipeline.quality: [yellow 2024-01] Total: 2964624 | Valid: 2963723 (99.97%) | DQ Anomalies: 901
+2026-11-15 15:40:07,988 [INFO] pipeline.quality: [green 2024-01] Total: 56551 | Valid: 56473 (99.86%) | DQ Anomalies: 78
+2026-11-15 15:40:08,077 [INFO] pipeline.quality: [fhv 2024-01] Total: 1290116 | Valid: 1289685 (99.97%) | DQ Anomalies: 431
+2026-11-15 15:40:08,519 [INFO] pipeline.quality: [hvfhv 2024-01] Total: 19663930 | Valid: 19663928 (100.00%) | DQ Anomalies: 2
+2026-11-15 15:40:08,520 [INFO] pipeline.quality: Saved Data Quality report to /home/rumi/Works/antigravity/universityClasses/CS341/assign2/reports/data_quality_report.json
+2026-11-15 15:40:08,520 [INFO] pipeline: === Phase 3: Transformation & Curation ===
+2026-11-15 15:40:08,696 [INFO] pipeline.transformer: Transformed and staged metrics for yellow 2024-01
+2026-11-15 15:40:08,711 [INFO] pipeline.transformer: Transformed and staged metrics for green 2024-01
+2026-11-15 15:40:08,797 [INFO] pipeline.transformer: Transformed and staged metrics for fhv 2024-01
+2026-11-15 15:40:09,147 [INFO] pipeline.transformer: Transformed and staged metrics for hvfhv 2024-01
+2026-11-15 15:40:09,156 [INFO] pipeline.transformer: Exported curated monthly metrics to /home/rumi/Works/antigravity/universityClasses/CS341/assign2/data/curated/curated_monthly_metrics.parquet
+2026-11-15 15:40:09,519 [INFO] pipeline.transformer: Exported curated sample dataset to /home/rumi/Works/antigravity/universityClasses/CS341/assign2/data/curated/curated_trips_sample.parquet
+2026-11-15 15:40:09,520 [INFO] pipeline: === Phase 4: Downstream Analysis & Output Generation ===
+2026-11-15 15:41:10,227 [INFO] pipeline: === Phase 1: Ingestion & Caching ===
+2026-11-15 15:41:10,227 [INFO] pipeline.ingest: Cached file already present: yellow_tripdata_2024-01.parquet (49961641 bytes)
+2026-11-15 15:41:10,227 [INFO] pipeline.ingest: Cached file already present: green_tripdata_2024-01.parquet (1362284 bytes)
+2026-11-15 15:41:10,227 [INFO] pipeline.ingest: Cached file already present: fhv_tripdata_2024-01.parquet (15023585 bytes)
+2026-11-15 15:41:10,227 [INFO] pipeline.ingest: Cached file already present: fhvhv_tripdata_2024-01.parquet (472757547 bytes)
+2026-11-15 15:41:10,227 [INFO] pipeline: Ingestion complete. Total datasets ready: 4
+2026-11-15 15:41:10,227 [INFO] pipeline: === Phase 2: Data Quality & Sanity Validation ===
+2026-11-15 15:41:10,369 [INFO] pipeline.quality: [yellow 2024-01] Total: 2964624 | Valid: 2963723 (99.97%) | DQ Anomalies: 901
+2026-11-15 15:41:10,378 [INFO] pipeline.quality: [green 2024-01] Total: 56551 | Valid: 56473 (99.86%) | DQ Anomalies: 78
+2026-11-15 15:41:10,460 [INFO] pipeline.quality: [fhv 2024-01] Total: 1290116 | Valid: 1289685 (99.97%) | DQ Anomalies: 431
+2026-11-15 15:41:10,928 [INFO] pipeline.quality: [hvfhv 2024-01] Total: 19663930 | Valid: 19663928 (100.00%) | DQ Anomalies: 2
+2026-11-15 15:41:10,928 [INFO] pipeline.quality: Saved Data Quality report to /home/rumi/Works/antigravity/universityClasses/CS341/assign2/reports/data_quality_report.json
+2026-11-15 15:41:10,929 [INFO] pipeline: === Phase 3: Transformation & Curation ===
+2026-11-15 15:41:11,108 [INFO] pipeline.transformer: Transformed and staged metrics for yellow 2024-01
+2026-11-15 15:41:11,121 [INFO] pipeline.transformer: Transformed and staged metrics for green 2024-01
+2026-11-15 15:41:11,191 [INFO] pipeline.transformer: Transformed and staged metrics for fhv 2024-01
+2026-11-15 15:41:11,536 [INFO] pipeline.transformer: Transformed and staged metrics for hvfhv 2024-01
+2026-11-15 15:41:11,539 [INFO] pipeline.transformer: Exported curated monthly metrics to /home/rumi/Works/antigravity/universityClasses/CS341/assign2/data/curated/curated_monthly_metrics.parquet
+2026-11-15 15:41:11,944 [INFO] pipeline.transformer: Exported curated sample dataset to /home/rumi/Works/antigravity/universityClasses/CS341/assign2/data/curated/curated_trips_sample.parquet
+2026-11-15 15:41:11,944 [INFO] pipeline: === Phase 4: Downstream Analysis & Output Generation ===
+2026-11-15 15:43:02,656 [INFO] pipeline: === Phase 1: Ingestion & Caching ===
+2026-11-15 15:43:02,656 [INFO] pipeline.ingest: Cached file already present: yellow_tripdata_2024-01.parquet (49961641 bytes)
+2026-11-15 15:43:02,657 [INFO] pipeline.ingest: Cached file already present: green_tripdata_2024-01.parquet (1362284 bytes)
+2026-11-15 15:43:02,657 [INFO] pipeline.ingest: Cached file already present: fhv_tripdata_2024-01.parquet (15023585 bytes)
+2026-11-15 15:43:02,657 [INFO] pipeline.ingest: Cached file already present: fhvhv_tripdata_2024-01.parquet (472757547 bytes)
+2026-11-15 15:43:02,657 [INFO] pipeline: Ingestion complete. Total datasets ready: 4
+2026-11-15 15:43:02,657 [INFO] pipeline: === Phase 2: Data Quality & Sanity Validation ===
+2026-11-15 15:43:02,796 [INFO] pipeline.quality: [yellow 2024-01] Total: 2964624 | Valid: 2963723 (99.97%) | DQ Anomalies: 901
+2026-11-15 15:43:02,806 [INFO] pipeline.quality: [green 2024-01] Total: 56551 | Valid: 56473 (99.86%) | DQ Anomalies: 78
+2026-11-15 15:43:02,884 [INFO] pipeline.quality: [fhv 2024-01] Total: 1290116 | Valid: 1289685 (99.97%) | DQ Anomalies: 431
+2026-11-15 15:43:03,318 [INFO] pipeline.quality: [hvfhv 2024-01] Total: 19663930 | Valid: 19663928 (100.00%) | DQ Anomalies: 2
+2026-11-15 15:43:03,318 [INFO] pipeline.quality: Saved Data Quality report to /home/rumi/Works/antigravity/universityClasses/CS341/assign2/reports/data_quality_report.json
+2026-11-15 15:43:03,318 [INFO] pipeline: === Phase 3: Transformation & Curation ===
+2026-11-15 15:43:03,475 [INFO] pipeline.transformer: Transformed and staged metrics for yellow 2024-01
+2026-11-15 15:43:03,487 [INFO] pipeline.transformer: Transformed and staged metrics for green 2024-01
+2026-11-15 15:43:03,560 [INFO] pipeline.transformer: Transformed and staged metrics for fhv 2024-01
+2026-11-15 15:43:03,894 [INFO] pipeline.transformer: Transformed and staged metrics for hvfhv 2024-01
+2026-11-15 15:43:03,913 [INFO] pipeline.transformer: Exported curated monthly metrics to /home/rumi/Works/antigravity/universityClasses/CS341/assign2/data/curated/curated_monthly_metrics.parquet
+2026-11-15 15:43:04,326 [INFO] pipeline.transformer: Exported curated sample dataset to /home/rumi/Works/antigravity/universityClasses/CS341/assign2/data/curated/curated_trips_sample.parquet
+2026-11-15 15:43:04,326 [INFO] pipeline: === Phase 4: Downstream Analysis & Output Generation ===
+2026-11-15 15:43:05,244 [INFO] pipeline.analysis: Saved visualization chart to /home/rumi/Works/antigravity/universityClasses/CS341/assign2/reports/market_share_h1_2024.png
+2026-11-15 15:43:05,244 [INFO] pipeline.analysis: Saved summary report to /home/rumi/Works/antigravity/universityClasses/CS341/assign2/reports/summary_results.md
+2026-11-15 15:43:32,292 [INFO] pipeline: === Phase 1: Ingestion & Caching ===
+2026-11-15 15:43:32,292 [INFO] pipeline.ingest: Cached file already present: yellow_tripdata_2024-01.parquet (49961641 bytes)
+2026-11-15 15:43:32,292 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-02.parquet to yellow_tripdata_2024-02.parquet
+2026-11-15 15:43:33,583 [INFO] pipeline.ingest: Successfully downloaded yellow_tripdata_2024-02.parquet (50349284 bytes)
+2026-11-15 15:43:33,585 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-03.parquet to yellow_tripdata_2024-03.parquet
+2026-11-15 15:43:34,837 [INFO] pipeline.ingest: Successfully downloaded yellow_tripdata_2024-03.parquet (60078280 bytes)
+2026-11-15 15:43:34,838 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-04.parquet to yellow_tripdata_2024-04.parquet
+2026-11-15 15:43:36,528 [INFO] pipeline.ingest: Successfully downloaded yellow_tripdata_2024-04.parquet (59133625 bytes)
+2026-11-15 15:43:36,530 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-05.parquet to yellow_tripdata_2024-05.parquet
+2026-11-15 15:43:37,877 [INFO] pipeline.ingest: Successfully downloaded yellow_tripdata_2024-05.parquet (62553128 bytes)
+2026-11-15 15:43:37,879 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-06.parquet to yellow_tripdata_2024-06.parquet
+2026-11-15 15:43:39,290 [INFO] pipeline.ingest: Successfully downloaded yellow_tripdata_2024-06.parquet (59859922 bytes)
+2026-11-15 15:43:39,292 [INFO] pipeline.ingest: Cached file already present: green_tripdata_2024-01.parquet (1362284 bytes)
+2026-11-15 15:43:39,292 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2024-02.parquet to green_tripdata_2024-02.parquet
+2026-11-15 15:43:41,309 [INFO] pipeline.ingest: Successfully downloaded green_tripdata_2024-02.parquet (1283805 bytes)
+2026-11-15 15:43:41,311 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2024-03.parquet to green_tripdata_2024-03.parquet
+2026-11-15 15:43:41,496 [INFO] pipeline.ingest: Successfully downloaded green_tripdata_2024-03.parquet (1372372 bytes)
+2026-11-15 15:43:41,498 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2024-04.parquet to green_tripdata_2024-04.parquet
+2026-11-15 15:43:41,654 [INFO] pipeline.ingest: Successfully downloaded green_tripdata_2024-04.parquet (1346502 bytes)
+2026-11-15 15:43:41,657 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2024-05.parquet to green_tripdata_2024-05.parquet
+2026-11-15 15:43:41,829 [INFO] pipeline.ingest: Successfully downloaded green_tripdata_2024-05.parquet (1453912 bytes)
+2026-11-15 15:43:41,831 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2024-06.parquet to green_tripdata_2024-06.parquet
+2026-11-15 15:43:41,986 [INFO] pipeline.ingest: Successfully downloaded green_tripdata_2024-06.parquet (1326194 bytes)
+2026-11-15 15:43:41,988 [INFO] pipeline.ingest: Cached file already present: fhv_tripdata_2024-01.parquet (15023585 bytes)
+2026-11-15 15:43:41,988 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/fhv_tripdata_2024-02.parquet to fhv_tripdata_2024-02.parquet
+2026-11-15 15:43:45,054 [INFO] pipeline.ingest: Successfully downloaded fhv_tripdata_2024-02.parquet (13608941 bytes)
+2026-11-15 15:43:45,057 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/fhv_tripdata_2024-03.parquet to fhv_tripdata_2024-03.parquet
+2026-11-15 15:43:48,139 [INFO] pipeline.ingest: Successfully downloaded fhv_tripdata_2024-03.parquet (16743352 bytes)
+2026-11-15 15:43:48,140 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/fhv_tripdata_2024-04.parquet to fhv_tripdata_2024-04.parquet
+2026-11-15 15:43:48,641 [INFO] pipeline.ingest: Successfully downloaded fhv_tripdata_2024-04.parquet (16515459 bytes)
+2026-11-15 15:43:48,644 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/fhv_tripdata_2024-05.parquet to fhv_tripdata_2024-05.parquet
+2026-11-15 15:43:52,175 [INFO] pipeline.ingest: Successfully downloaded fhv_tripdata_2024-05.parquet (15958984 bytes)
+2026-11-15 15:43:52,177 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/fhv_tripdata_2024-06.parquet to fhv_tripdata_2024-06.parquet
+2026-11-15 15:43:55,445 [INFO] pipeline.ingest: Successfully downloaded fhv_tripdata_2024-06.parquet (16029924 bytes)
+2026-11-15 15:43:55,447 [INFO] pipeline.ingest: Cached file already present: fhvhv_tripdata_2024-01.parquet (472757547 bytes)
+2026-11-15 15:43:55,447 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/fhvhv_tripdata_2024-02.parquet to fhvhv_tripdata_2024-02.parquet
+2026-11-15 15:44:24,429 [INFO] pipeline.ingest: Successfully downloaded fhvhv_tripdata_2024-02.parquet (462475428 bytes)
+2026-11-15 15:44:24,431 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/fhvhv_tripdata_2024-03.parquet to fhvhv_tripdata_2024-03.parquet
+2026-11-15 15:44:54,115 [INFO] pipeline.ingest: Successfully downloaded fhvhv_tripdata_2024-03.parquet (507940560 bytes)
+2026-11-15 15:44:54,117 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/fhvhv_tripdata_2024-04.parquet to fhvhv_tripdata_2024-04.parquet
+2026-11-15 15:45:26,065 [INFO] pipeline.ingest: Successfully downloaded fhvhv_tripdata_2024-04.parquet (476115643 bytes)
+2026-11-15 15:45:26,067 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/fhvhv_tripdata_2024-05.parquet to fhvhv_tripdata_2024-05.parquet
+2026-11-15 15:45:56,306 [INFO] pipeline.ingest: Successfully downloaded fhvhv_tripdata_2024-05.parquet (498575918 bytes)
+2026-11-15 15:45:56,308 [INFO] pipeline.ingest: Downloading from https://d37ci6vzurychx.cloudfront.net/trip-data/fhvhv_tripdata_2024-06.parquet to fhvhv_tripdata_2024-06.parquet
+2026-11-15 15:46:25,127 [INFO] pipeline.ingest: Successfully downloaded fhvhv_tripdata_2024-06.parquet (484417715 bytes)
+2026-11-15 15:46:25,129 [INFO] pipeline: Ingestion complete. Total datasets ready: 24
+2026-11-15 15:46:25,129 [INFO] pipeline: === Phase 2: Data Quality & Sanity Validation ===
+2026-11-15 15:46:25,274 [INFO] pipeline.quality: [yellow 2024-01] Total: 2964624 | Valid: 2963723 (99.97%) | DQ Anomalies: 901
+2026-11-15 15:46:25,385 [INFO] pipeline.quality: [yellow 2024-02] Total: 3007526 | Valid: 3006709 (99.97%) | DQ Anomalies: 817
+2026-11-15 15:46:25,486 [INFO] pipeline.quality: [yellow 2024-03] Total: 3582628 | Valid: 3581478 (99.97%) | DQ Anomalies: 1150
+2026-11-15 15:46:25,598 [INFO] pipeline.quality: [yellow 2024-04] Total: 3514289 | Valid: 3513170 (99.97%) | DQ Anomalies: 1119
+2026-11-15 15:46:25,719 [INFO] pipeline.quality: [yellow 2024-05] Total: 3723833 | Valid: 3722664 (99.97%) | DQ Anomalies: 1169
+2026-11-15 15:46:25,825 [INFO] pipeline.quality: [yellow 2024-06] Total: 3539193 | Valid: 3538024 (99.97%) | DQ Anomalies: 1169
+2026-11-15 15:46:25,836 [INFO] pipeline.quality: [green 2024-01] Total: 56551 | Valid: 56473 (99.86%) | DQ Anomalies: 78
+2026-11-15 15:46:25,844 [INFO] pipeline.quality: [green 2024-02] Total: 53577 | Valid: 53529 (99.91%) | DQ Anomalies: 48
+2026-11-15 15:46:25,853 [INFO] pipeline.quality: [green 2024-03] Total: 57457 | Valid: 57421 (99.94%) | DQ Anomalies: 36
+2026-11-15 15:46:25,861 [INFO] pipeline.quality: [green 2024-04] Total: 56471 | Valid: 56401 (99.88%) | DQ Anomalies: 70
+2026-11-15 15:46:25,875 [INFO] pipeline.quality: [green 2024-05] Total: 61003 | Valid: 60948 (99.91%) | DQ Anomalies: 55
+2026-11-15 15:46:25,883 [INFO] pipeline.quality: [green 2024-06] Total: 54748 | Valid: 54694 (99.90%) | DQ Anomalies: 54
+2026-11-15 15:46:25,961 [INFO] pipeline.quality: [fhv 2024-01] Total: 1290116 | Valid: 1289685 (99.97%) | DQ Anomalies: 431
+2026-11-15 15:46:26,041 [INFO] pipeline.quality: [fhv 2024-02] Total: 1176093 | Valid: 1175314 (99.93%) | DQ Anomalies: 779
+2026-11-15 15:46:26,136 [INFO] pipeline.quality: [fhv 2024-03] Total: 1469352 | Valid: 1468681 (99.95%) | DQ Anomalies: 671
+2026-11-15 15:46:26,237 [INFO] pipeline.quality: [fhv 2024-04] Total: 1444626 | Valid: 1444521 (99.99%) | DQ Anomalies: 105
+2026-11-15 15:46:26,324 [INFO] pipeline.quality: [fhv 2024-05] Total: 1352502 | Valid: 1352347 (99.99%) | DQ Anomalies: 155
+2026-11-15 15:46:26,415 [INFO] pipeline.quality: [fhv 2024-06] Total: 1386539 | Valid: 1386459 (99.99%) | DQ Anomalies: 80
+2026-11-15 15:46:26,784 [INFO] pipeline.quality: [hvfhv 2024-01] Total: 19663930 | Valid: 19663928 (100.00%) | DQ Anomalies: 2
+2026-11-15 15:46:27,186 [INFO] pipeline.quality: [hvfhv 2024-02] Total: 19359148 | Valid: 19359145 (100.00%) | DQ Anomalies: 3
+2026-11-15 15:46:27,689 [INFO] pipeline.quality: [hvfhv 2024-03] Total: 21280788 | Valid: 21280786 (100.00%) | DQ Anomalies: 2
+2026-11-15 15:46:28,161 [INFO] pipeline.quality: [hvfhv 2024-04] Total: 19733038 | Valid: 19733037 (100.00%) | DQ Anomalies: 1
+2026-11-15 15:46:28,793 [INFO] pipeline.quality: [hvfhv 2024-05] Total: 20704538 | Valid: 20704537 (100.00%) | DQ Anomalies: 1
+2026-11-15 15:46:29,265 [INFO] pipeline.quality: [hvfhv 2024-06] Total: 20123226 | Valid: 20123223 (100.00%) | DQ Anomalies: 3
+2026-11-15 15:46:29,267 [INFO] pipeline.quality: Saved Data Quality report to /home/rumi/Works/antigravity/universityClasses/CS341/assign2/reports/data_quality_report.json
+2026-11-15 15:46:29,267 [INFO] pipeline: === Phase 3: Transformation & Curation ===
+2026-11-15 15:46:29,459 [INFO] pipeline.transformer: Transformed and staged metrics for yellow 2024-01
+2026-11-15 15:46:29,573 [INFO] pipeline.transformer: Transformed and staged metrics for yellow 2024-02
+2026-11-15 15:46:29,696 [INFO] pipeline.transformer: Transformed and staged metrics for yellow 2024-03
+2026-11-15 15:46:29,821 [INFO] pipeline.transformer: Transformed and staged metrics for yellow 2024-04
+2026-11-15 15:46:29,959 [INFO] pipeline.transformer: Transformed and staged metrics for yellow 2024-05
+2026-11-15 15:46:30,084 [INFO] pipeline.transformer: Transformed and staged metrics for yellow 2024-06
+2026-11-15 15:46:30,096 [INFO] pipeline.transformer: Transformed and staged metrics for green 2024-01
+2026-11-15 15:46:30,111 [INFO] pipeline.transformer: Transformed and staged metrics for green 2024-02
+2026-11-15 15:46:30,129 [INFO] pipeline.transformer: Transformed and staged metrics for green 2024-03
+2026-11-15 15:46:30,143 [INFO] pipeline.transformer: Transformed and staged metrics for green 2024-04
+2026-11-15 15:46:30,159 [INFO] pipeline.transformer: Transformed and staged metrics for green 2024-05
+2026-11-15 15:46:30,172 [INFO] pipeline.transformer: Transformed and staged metrics for green 2024-06
+2026-11-15 15:46:30,252 [INFO] pipeline.transformer: Transformed and staged metrics for fhv 2024-01
+2026-11-15 15:46:30,346 [INFO] pipeline.transformer: Transformed and staged metrics for fhv 2024-02
+2026-11-15 15:46:30,423 [INFO] pipeline.transformer: Transformed and staged metrics for fhv 2024-03
+2026-11-15 15:46:30,495 [INFO] pipeline.transformer: Transformed and staged metrics for fhv 2024-04
+2026-11-15 15:46:30,588 [INFO] pipeline.transformer: Transformed and staged metrics for fhv 2024-05
+2026-11-15 15:46:30,688 [INFO] pipeline.transformer: Transformed and staged metrics for fhv 2024-06
+2026-11-15 15:46:31,033 [INFO] pipeline.transformer: Transformed and staged metrics for hvfhv 2024-01
+2026-11-15 15:46:31,413 [INFO] pipeline.transformer: Transformed and staged metrics for hvfhv 2024-02
+2026-11-15 15:46:31,826 [INFO] pipeline.transformer: Transformed and staged metrics for hvfhv 2024-03
+2026-11-15 15:46:32,250 [INFO] pipeline.transformer: Transformed and staged metrics for hvfhv 2024-04
+2026-11-15 15:46:32,605 [INFO] pipeline.transformer: Transformed and staged metrics for hvfhv 2024-05
+2026-11-15 15:46:32,965 [INFO] pipeline.transformer: Transformed and staged metrics for hvfhv 2024-06
+2026-11-15 15:46:32,981 [INFO] pipeline.transformer: Exported curated monthly metrics to /home/rumi/Works/antigravity/universityClasses/CS341/assign2/data/curated/curated_monthly_metrics.parquet
+2026-11-15 15:46:35,842 [INFO] pipeline.transformer: Exported curated sample dataset to /home/rumi/Works/antigravity/universityClasses/CS341/assign2/data/curated/curated_trips_sample.parquet
+2026-11-15 15:46:35,842 [INFO] pipeline: === Phase 4: Downstream Analysis & Output Generation ===
+2026-11-15 15:46:36,803 [INFO] pipeline.analysis: Saved visualization chart to /home/rumi/Works/antigravity/universityClasses/CS341/assign2/reports/market_share_h1_2024.png
+2026-11-15 15:46:36,803 [INFO] pipeline.analysis: Saved summary report to /home/rumi/Works/antigravity/universityClasses/CS341/assign2/reports/summary_results.md

@@ -1,0 +1,25 @@
+[project]
+name = "assign2"
+version = "0.1.0"
+description = "Reproducible NYC Taxi Data Pipeline (H1 2024)"
+readme = "README.md"
+authors = [
+    { name = "Kanna-Sama89", email = "ToukaKannaSama@proton.me" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "duckdb>=2.0.0",
+    "matplotlib>=3.11.2",
+    "polars>=2.1.0",
+    "pyarrow>=26.0.1",
+    "requests>=2.34.2",
+    "rich>=15.0.0",
+    "tqdm>=4.70.1",
+]
+
+[project.scripts]
+assign2 = "run_pipeline:main"
+
+[build-system]
+requires = ["uv_build>=0.13.8,<0.14.0"]
+build-backend = "uv_build"
