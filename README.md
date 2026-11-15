@@ -8,7 +8,7 @@
 
 ---
 
-## 📌 Executive Summary & Research Answer
+## Executive Summary & Research Answer
 
 ### **Core Question**: *"Which taxi type was the most used in the first half of 2024?"*
 
@@ -27,7 +27,7 @@
 
 ---
 
-## 🏗️ Pipeline Architecture & Data Flow
+## Pipeline Architecture & Data Flow
 
 ```mermaid
 flowchart TD
@@ -72,7 +72,7 @@ flowchart TD
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```text
 assign2/
@@ -103,7 +103,7 @@ assign2/
 
 ---
 
-## 🚀 Setup & Execution Guide
+## Setup & Execution Guide
 
 ### Prerequisites
 - Python `>= 3.12`
@@ -134,7 +134,7 @@ uv run python run_pipeline.py --services yellow green
 
 ---
 
-## 🛡️ Data Quality & Audit Results
+## Data Quality & Audit Results
 
 The pipeline incorporates automated data quality gates verifying temporal integrity, chronological ordering, and physical plausibility:
 
@@ -153,7 +153,7 @@ Full dataset-by-dataset audit statistics are saved to [`reports/data_quality_rep
 
 ---
 
-## 💡 Key Architectural & Design Decisions
+## Key Architectural & Design Decisions
 
 ### Decision 1: Canonical Schema Adapter Pattern
 - **Challenge**: The NYC TLC dataset has notorious schema discrepancies across fleets:
@@ -176,7 +176,7 @@ Full dataset-by-dataset audit statistics are saved to [`reports/data_quality_rep
 
 ---
 
-## 🔄 Evolution: Submission 1 vs. Submission 2
+## Evolution: Submission 1 vs. Submission 2
 
 | Dimension | Submission 1 (Baseline) | Submission 2 (Production Pipeline) |
 |---|---|---|
@@ -189,13 +189,13 @@ Full dataset-by-dataset audit statistics are saved to [`reports/data_quality_rep
 
 ---
 
-## 📝 Learning Reflection (3–5 Sentences)
+## Learning Reflection (3–5 Sentences)
 
 Building this pipeline demonstrated that data engineering is fundamentally about managing schema entropy and scale rather than just writing analytical queries. Normalizing four heterogeneous TLC datasets with distinct column conventions and missing fields highlighted the necessity of the Adapter pattern in production architectures. Furthermore, processing 150 million records revealed the stark performance divide between traditional in-memory Pandas workflows and modern columnar streaming engines like DuckDB. Ultimately, establishing automated data quality gates early proved critical, as even official government repositories contain subtle timestamp and duration anomalies that can skew downstream conclusions if left unquarantined.
 
 ---
 
-## ⚠️ Current Limitations & Future Work
+## Current Limitations & Future Work
 
 1. **Network Bandwidth Dependency**: The initial run downloads ~3GB of Parquet files from CloudFront. Future iterations could integrate HTTP range queries to aggregate metadata headers remotely without transferring full file payloads.
 2. **Spatial Granularity**: Current metrics aggregate at the city-wide service level. Linking `PULocationID` and `DOLocationID` against the TLC NYC Taxi Zone Shapefile would allow borough-by-borough geospatial market share comparisons.
